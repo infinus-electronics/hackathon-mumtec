@@ -127,6 +127,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('calendar') }}">
+                      <i class="ni ni-bullet-list-67 text-default"></i>
+                      <span class="nav-link-text">Calendar Test</span>
+                    </a>
+                </li>
+
             </ul>
             <!-- Divider -->
             <hr class="my-3">
