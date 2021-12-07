@@ -19,24 +19,20 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', function () {return view('pages.anki');})->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 
-Route::get('/home', function () {return view('pages.anki');})->name('home');
+Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
 	Route::get('upgrade', function () {return view('pages.upgrade');})->name('upgrade'); 
-
-
-	//  Route::get('dashboard', function () {return view('pages.dashboard');})->name('dashboard');
-	 Route::get('kanban', function () {return view('pages.kanban');})->name('kanban'); 
+	 Route::get('map', function () {return view('pages.maps');})->name('map');
+	 Route::get('icons', function () {return view('pages.icons');})->name('icons'); 
 	 Route::get('calendar', function () {return view('pages.calendar');})->name('calendar'); 
-	 Route::get('homework-help', function () {return view('pages.chatbot');})->name('homework-help');
-    //  Route::get('anki', function () {return view('pages.anki');})->name('anki');
+	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
 

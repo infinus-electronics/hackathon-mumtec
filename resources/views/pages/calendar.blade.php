@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+    @include('layouts.headers.app-head')
     <div class = "main-content">
         <div class="container-fluid">
             <div class="row">
