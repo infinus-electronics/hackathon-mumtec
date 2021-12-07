@@ -24,8 +24,8 @@
 
 <!-- Calendar Stuff -->
 
-<link href='https://www.jsdelivr.com/package/npm/fullcalendar/main.css' rel='stylesheet' />
-<script src='https://www.jsdelivr.com/package/npm/fullcalendar/main.js'></script>
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css' rel='stylesheet' />
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.js'></script>
 
 <script>
 
