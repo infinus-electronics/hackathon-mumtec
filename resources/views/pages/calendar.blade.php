@@ -4,17 +4,16 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <div class="container">
+<div class = "main-content">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-sm">
+            <div class="col">
 
                 <div id='calendar'></div>
 
             </div>
         </div>
     </div>
-
-
+</div>
 
 
