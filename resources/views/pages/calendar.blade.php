@@ -10,17 +10,17 @@
         <title>Argon Dashboard</title>
 
         <!-- Favicon -->
-<link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
+<link href="{{ asset('argon') }}/img/brand/favicon.png" rel="icon" type="image/png">
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
 <!-- Icons -->
-<link href="/assets/vendor/nucleo/css/nucleo.min.css" rel="stylesheet">
-<link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link href="{{ asset('argon') }}/vendor/nucleo/css/nucleo.min.css" rel="stylesheet">
+<link href="{{ asset('argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 
 <!-- Argon CSS -->
-<link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+<link type="text/css" href="{{ asset('argon') }}/css/argon.min.css" rel="stylesheet">
 
 <!-- Calendar Stuff -->
 
@@ -47,11 +47,11 @@
 
 
         <!-- Core -->
-<script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
-<script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
+<script src="{{ asset('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Argon JS -->
-<script src="/assets/js/argon.min.js"></script>
+<script src="{{ asset('argon') }}/js/argon.min.js"></script>
     </body>
 
 </html>
