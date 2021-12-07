@@ -1,6 +1,3 @@
-<!-- test of the calendar widget -->
-
-
 @extends('layouts.app')
 
 @section('content')
@@ -16,5 +13,5 @@
             </div>
         </div>
     </div>
-
+@endsection
 
