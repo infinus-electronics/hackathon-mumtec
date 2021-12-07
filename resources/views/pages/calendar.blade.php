@@ -5,9 +5,15 @@
 
 @section('content')
 
-        <h1>Hello, World</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
 
-        <div id='calendar'></div>
+            <div id='calendar'></div>
+
+        </div>
+    </div>
+</div>
 
 
 
