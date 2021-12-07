@@ -21,10 +21,30 @@
 
 <!-- Argon CSS -->
 <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+
+<!-- Calendar Stuff -->
+
+<link href='https://www.jsdelivr.com/package/npm/fullcalendar/main.css' rel='stylesheet' />
+<script src='https://www.jsdelivr.com/package/npm/fullcalendar/main.js'></script>
+
+<script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+</script>
     </head>
 
     <body>
-        <h1>Hello, world!</h1>
+        <h1>Hello, World</h1>
+
+        <div id='calendar'></div>
+
 
         <!-- Core -->
 <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
