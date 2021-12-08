@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BotManController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,5 +42,6 @@ Route::group(['middleware' => 'auth'], function () {
     
 });
 
-Route::match(['get', 'post'], '/botman', 'BotManController@handle');
+// Route::match(['get', 'post'], '/botman', [BotManController::class, 'handle']);
+Route::match(['get', 'post'], '/botman', 'App\Http\Controllers@handle');
 
