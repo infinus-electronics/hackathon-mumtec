@@ -6,7 +6,7 @@
     <H1 class="text-center">CLICK THE MAIL ICON TO CHAT WITH ME</H1>
     <img style="display: block;margin-left: auto;margin-right: auto;width: 50%;position:absolute;" src="https://i.pinimg.com/736x/02/b1/3c/02b13cd6e197d1456c42792a71b7cb75.jpg" alt="Picture" class="center">
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/assets/css/chat.min.css">
+    
     <script>
         var botmanWidget = {
             aboutText: 'ssdsd',
