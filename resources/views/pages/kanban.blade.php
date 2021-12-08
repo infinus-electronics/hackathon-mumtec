@@ -156,21 +156,221 @@
 <script>
 dragula([document.querySelector('#backlog'), document.querySelector('#progress'), document.querySelector('#completed')]);
 
-document.getElementById('add-incomplete').addEventListener('click', function(){
-
+function handleSubmitIncomplete(txt){
+    // alert(txt);
     var newNode = document.createElement('DIV');
     newNode.setAttribute('class',"card mb-3 cursor-grab");
+
+    document.querySelector('#backlog').appendChild(newNode);
+
     var cardBody = document.createElement('DIV');
     cardBody.setAttribute('class', 'card-body');
     var cardText = document.createElement('P');
     cardText.setAttribute('class', 'mb-0');
-    cardText.innerHTML = 'Here is a new test node';
+    cardText.innerHTML = txt;
     // cardBody.appendChild(document.createTextNode('Here is a new test node'));
     cardBody.appendChild(cardText);
     newNode.appendChild(cardBody);
 
+    var inputForm = document.getElementById('new-form');
+    inputForm.parentNode.removeChild(inputForm);
+
+};
+function handleSubmitProgress(txt){
+    // alert(txt);
+    var newNode = document.createElement('DIV');
+    newNode.setAttribute('class',"card mb-3 cursor-grab");
+
+    document.querySelector('#progress').appendChild(newNode);
+
+    var cardBody = document.createElement('DIV');
+    cardBody.setAttribute('class', 'card-body');
+    var cardText = document.createElement('P');
+    cardText.setAttribute('class', 'mb-0');
+    cardText.innerHTML = txt;
+    // cardBody.appendChild(document.createTextNode('Here is a new test node'));
+    cardBody.appendChild(cardText);
+    newNode.appendChild(cardBody);
+
+    var inputForm = document.getElementById('new-form');
+    inputForm.parentNode.removeChild(inputForm);
+
+};
+function handleSubmitComplete(txt){
+    // alert(txt);
+    var newNode = document.createElement('DIV');
+    newNode.setAttribute('class',"card mb-3 cursor-grab");
+
+    document.querySelector('#completed').appendChild(newNode);
+
+    var cardBody = document.createElement('DIV');
+    cardBody.setAttribute('class', 'card-body');
+    var cardText = document.createElement('P');
+    cardText.setAttribute('class', 'mb-0');
+    cardText.innerHTML = txt;
+    // cardBody.appendChild(document.createTextNode('Here is a new test node'));
+    cardBody.appendChild(cardText);
+    newNode.appendChild(cardBody);
+
+    var inputForm = document.getElementById('new-form');
+    inputForm.parentNode.removeChild(inputForm);
+
+};
+
+document.getElementById('add-incomplete').addEventListener('click', function(){
+
+
+    var newNode = document.createElement('DIV');
+    newNode.setAttribute('class',"card mb-3 cursor-grab");
+    newNode.setAttribute('id', "new-form")
+
     document.querySelector('#backlog').appendChild(newNode);
+
+    var form = document.createElement('form');
+    form.setAttribute('onSubmit', 'return handleSubmitIncomplete(document.getElementById("input-incomplete").value)');
+    form.setAttribute('class', 'form-inline');
+    var inputgrp = document.createElement('div');
+    inputgrp.setAttribute('class', 'form-group mb-2');
+    var input = document.createElement("input");
+    input.setAttribute("type", "text");
+    input.setAttribute("class", "form-control");
+    input.setAttribute("id", "input-incomplete");
+    input.setAttribute("placeholder", "Begin your new note!");
+    inputgrp.appendChild(input);
+    var submitButton = document.createElement("button");
+    submitButton.setAttribute("type", "submit");
+    submitButton.setAttribute("class", "btn btn-primary mb-2");
+    submitButton.innerHTML="Save";
+    form.appendChild(inputgrp);
+    form.appendChild(submitButton);
+    
+    newNode.appendChild(form);
+
+    // var cardBody = document.createElement('DIV');
+    // cardBody.setAttribute('class', 'card-body');
+    // var cardText = document.createElement('P');
+    // cardText.setAttribute('class', 'mb-0');
+    // cardText.innerHTML = 'Here is a new test node';
+    // // cardBody.appendChild(document.createTextNode('Here is a new test node'));
+    // cardBody.appendChild(cardText);
+    // newNode.appendChild(cardBody);
+
+    // document.querySelector('#backlog').appendChild(newNode);
 })
+
+document.getElementById('add-progress').addEventListener('click', function(){
+
+
+var newNode = document.createElement('DIV');
+newNode.setAttribute('class',"card mb-3 cursor-grab");
+newNode.setAttribute('id', "new-form")
+
+document.querySelector('#progress').appendChild(newNode);
+
+var form = document.createElement('form');
+form.setAttribute('onSubmit', 'return handleSubmitProgress(document.getElementById("input-progress").value)');
+form.setAttribute('class', 'form-inline');
+var inputgrp = document.createElement('div');
+inputgrp.setAttribute('class', 'form-group mb-2');
+var input = document.createElement("input");
+input.setAttribute("type", "text");
+input.setAttribute("class", "form-control");
+input.setAttribute("id", "input-progress");
+input.setAttribute("placeholder", "Begin your new note!");
+inputgrp.appendChild(input);
+var submitButton = document.createElement("button");
+submitButton.setAttribute("type", "submit");
+submitButton.setAttribute("class", "btn btn-primary mb-2");
+submitButton.innerHTML="Save";
+form.appendChild(inputgrp);
+form.appendChild(submitButton);
+
+newNode.appendChild(form);
+
+// var cardBody = document.createElement('DIV');
+// cardBody.setAttribute('class', 'card-body');
+// var cardText = document.createElement('P');
+// cardText.setAttribute('class', 'mb-0');
+// cardText.innerHTML = 'Here is a new test node';
+// // cardBody.appendChild(document.createTextNode('Here is a new test node'));
+// cardBody.appendChild(cardText);
+// newNode.appendChild(cardBody);
+
+// document.querySelector('#backlog').appendChild(newNode);
+});
+
+document.getElementById('add-complete').addEventListener('click', function(){
+
+
+var newNode = document.createElement('DIV');
+newNode.setAttribute('class',"card mb-3 cursor-grab");
+newNode.setAttribute('id', "new-form")
+
+document.querySelector('#completed').appendChild(newNode);
+
+var form = document.createElement('form');
+form.setAttribute('onSubmit', 'return handleSubmitComplete(document.getElementById("input-completed").value)');
+form.setAttribute('class', 'form-inline');
+var inputgrp = document.createElement('div');
+inputgrp.setAttribute('class', 'form-group mb-2');
+var input = document.createElement("input");
+input.setAttribute("type", "text");
+input.setAttribute("class", "form-control");
+input.setAttribute("id", "input-completed");
+input.setAttribute("placeholder", "Begin your new note!");
+inputgrp.appendChild(input);
+var submitButton = document.createElement("button");
+submitButton.setAttribute("type", "submit");
+submitButton.setAttribute("class", "btn btn-primary mb-2");
+submitButton.innerHTML="Save";
+form.appendChild(inputgrp);
+form.appendChild(submitButton);
+
+newNode.appendChild(form);
+
+// var cardBody = document.createElement('DIV');
+// cardBody.setAttribute('class', 'card-body');
+// var cardText = document.createElement('P');
+// cardText.setAttribute('class', 'mb-0');
+// cardText.innerHTML = 'Here is a new test node';
+// // cardBody.appendChild(document.createTextNode('Here is a new test node'));
+// cardBody.appendChild(cardText);
+// newNode.appendChild(cardBody);
+
+// document.querySelector('#backlog').appendChild(newNode);
+});
+
+// document.getElementById('add-progress').addEventListener('click', function(e){
+
+// var newNode = document.createElement('DIV');
+// newNode.setAttribute('class',"card mb-3 cursor-grab");
+// var cardBody = document.createElement('DIV');
+// cardBody.setAttribute('class', 'card-body');
+// var cardText = document.createElement('P');
+// cardText.setAttribute('class', 'mb-0');
+// cardText.innerHTML = 'Here is a new test node';
+// // cardBody.appendChild(document.createTextNode('Here is a new test node'));
+// cardBody.appendChild(cardText);
+// newNode.appendChild(cardBody);
+
+// document.querySelector('#progress').appendChild(newNode);
+// })
+
+// document.getElementById('add-complete').addEventListener('click', function(){
+
+// var newNode = document.createElement('DIV');
+// newNode.setAttribute('class',"card mb-3 cursor-grab");
+// var cardBody = document.createElement('DIV');
+// cardBody.setAttribute('class', 'card-body');
+// var cardText = document.createElement('P');
+// cardText.setAttribute('class', 'mb-0');
+// cardText.innerHTML = 'Here is a new test node';
+// // cardBody.appendChild(document.createTextNode('Here is a new test node'));
+// cardBody.appendChild(cardText);
+// newNode.appendChild(cardBody);
+
+// document.querySelector('#completed').appendChild(newNode);
+// })
 </script>
     
 @endsection
