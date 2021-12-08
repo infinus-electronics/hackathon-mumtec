@@ -5,8 +5,13 @@
             <!-- <span class="navbar-toggler-icon"></span> -->
         <!-- </button> -->
         <!-- Brand -->
+        <style>
+            .navbar-vertical.navbar-expand-md .navbar-brand-img {
+                max-height: 4rem !important;
+            }       
+        </style>
         <a class="navbar-brand pt-0" href="{{ route('home') }}">
-            <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <img src="{{ asset('argon') }}/img/brand/ASSSSS.png" class="navbar-brand-img" alt="...">
         </a>
     
     <!-- </div> -->
