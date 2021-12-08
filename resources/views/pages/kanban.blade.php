@@ -48,7 +48,7 @@
             </div>
             <!-- End task -->
           </div>
-          <div class="btn btn-primary btn-block">Add task</div>
+          <div class="btn btn-primary btn-block" id='add-incomplete'>Add task</div>
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@
             </div>
             <!-- End task -->
           </div>
-          <div class="btn btn-primary btn-block">Add task</div>
+          <div class="btn btn-primary btn-block" id = "add-progress">Add task</div>
         </div>
       </div>
     </div>
@@ -143,7 +143,7 @@
             </div>
             <!-- End task -->
           </div>
-          <div class="btn btn-primary btn-block">Add task</div>
+          <div class="btn btn-primary btn-block" id="add-complete">Add task</div>
         </div>
       </div>
     </div>
@@ -153,6 +153,24 @@
 </div>
 
 
-<script>dragula([document.querySelector('#backlog'), document.querySelector('#progress'), document.querySelector('#completed')]);</script>
+<script>
+dragula([document.querySelector('#backlog'), document.querySelector('#progress'), document.querySelector('#completed')]);
+
+document.getElementById('add-incomplete').addEventListener('click', function(){
+
+    var newNode = document.createElement('DIV');
+    newNode.setAttribute('class',"card mb-3 cursor-grab");
+    var cardBody = document.createElement('DIV');
+    cardBody.setAttribute('class', 'card-body');
+    var cardText = document.createElement('P');
+    cardText.setAttribute('class', 'mb-0');
+    cardText.innerHTML = 'Here is a new test node';
+    // cardBody.appendChild(document.createTextNode('Here is a new test node'));
+    cardBody.appendChild(cardText);
+    newNode.appendChild(cardBody);
+
+    document.querySelector('#backlog').appendChild(newNode);
+})
+</script>
     
 @endsection
