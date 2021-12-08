@@ -19,6 +19,23 @@
         <link href="<?php echo e(asset('argon')); ?>/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
         <!-- Argon CSS -->
         <link type="text/css" href="<?php echo e(asset('argon')); ?>/css/argon.css?v=1.0.0" rel="stylesheet">
+
+        <!-- Calendar Stuff -->
+
+        <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css' rel='stylesheet' />
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.js'></script>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+                });
+                calendar.render();
+            });
+
+        </script>
     </head>
     <body class="<?php echo e($class ?? ''); ?>">
         <?php if(auth()->guard()->check()): ?>
@@ -44,5 +61,7 @@
         
         <!-- Argon JS -->
         <script src="<?php echo e(asset('argon')); ?>/js/argon.js?v=1.0.0"></script>
+
+        
     </body>
 </html><?php /**PATH /var/www/html/resources/views/layouts/app.blade.php ENDPATH**/ ?>

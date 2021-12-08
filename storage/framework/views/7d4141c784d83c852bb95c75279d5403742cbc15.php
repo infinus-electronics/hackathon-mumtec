@@ -75,7 +75,7 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">Page name</th>
+                                    <th scope="col">TEST</th>
                                     <th scope="col">Visitors</th>
                                     <th scope="col">Unique users</th>
                                     <th scope="col">Bounce rate</th>

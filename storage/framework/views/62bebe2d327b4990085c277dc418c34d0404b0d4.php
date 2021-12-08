@@ -1,4 +1,4 @@
-<nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
+<nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark br-gradient-primary">
     <div class="container px-4">
         <a class="navbar-brand" href="<?php echo e(route('home')); ?>">
             <img src="<?php echo e(asset('argon')); ?>/img/brand/white.png" />
