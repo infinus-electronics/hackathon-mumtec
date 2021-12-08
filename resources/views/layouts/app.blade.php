@@ -56,7 +56,9 @@
 
         <!-- Botman Stuff -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/assets/css/chat.min.css">
-
+        <style>body, head{
+            background-image: none}
+        </style>
         
     </head>
     <body class="{{ $class ?? '' }}">
