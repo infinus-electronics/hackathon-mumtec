@@ -43,5 +43,5 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 // Route::match(['get', 'post'], '/botman', [BotManController::class, 'handle']);
-Route::match(['get', 'post'], '/botman', 'App\Http\Controllers@handle');
+Route::match(['get', 'post'], '/botman', 'App\Http\Controllers\BotManController@handle');
 

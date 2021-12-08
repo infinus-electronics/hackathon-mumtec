@@ -32,7 +32,7 @@ class BotManController extends Controller
 
   
 
-        $botman->hears('{message}', function($botman, $message) {
+        $botman->hears('{message}', function($bot, $message) {
 
   
 
@@ -42,7 +42,7 @@ class BotManController extends Controller
 
             }else{
 
-                $botman->reply("write 'hi' for testing...");
+                $bot->reply("write 'hi' for testing...");
 
             }
 
