@@ -3,20 +3,6 @@
 @section('content')
     @include('layouts.headers.app-head')
 
-<style>
-    .cursor-grab {
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-
-.tasks {
-  min-height: 450px;
-}
-
-</style>
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/$VERSION/dragula.min.js'></script>
-
     <div class="container py-5">
   <div class="row">
 
@@ -166,5 +152,7 @@
   </div>
 </div>
 
+
+<script>dragula([document.querySelector('#backlog'), document.querySelector('#progress'), document.querySelector('#completed')]);</script>
     
 @endsection
