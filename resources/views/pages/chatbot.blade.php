@@ -13,7 +13,7 @@
             introMessage: "✋ Hi! I'm Yoong Ken, yes, that guy. :) Thanks for reaching out! How may I help you? Science, History, or how to bancuh kopi?"
         };
     </script>
-    
-    <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js"></script> 
     
 @endsection
