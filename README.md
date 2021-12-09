@@ -1,66 +1,193 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><img src="https://github.com/woonyee28/argon-dashboard-laravel/blob/master/ASSSSS.png" width="400"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## **Inspiration:**
 
-## About Laravel
+Scattered to-do list, endless deadlines, vague memory on previous lessons & irritating homework problems - these are the issues faced by students nowadays, which decrease their learning performance in school
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## **What it does:**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+To tackle these problems, we came up with an innovative idea. Introducing ASS, a web app that integrates some of the key features that students are desperate for, such as the famous Kanban board which provides a visual process management system which aids decision-making, a well-designed calendar that displays upcoming events to ensure you never miss a beat. There is also a flashcard feature that aids your learning process, by implementing spaced-repetition and bite-sized learning techniques to ensure that learning never stops. Also, a chatbot function is a must-have for all students having issues with homework, as we know that it might take decades to get a reply from your teachers.
 
-## Learning Laravel
+### **Details of Features:**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### **1. Login**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+##### **Background**
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+* Laravel
+* Argon Theme
+* Bootstrap
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+##### **Long Term Goal**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+* Look into how Laravel handles users so everyone gets served the right notes, calendar etc 
+* Design a database structure that will play nice with this 
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+#### **2. ANKI**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+##### **Background**
+
+
+
+* Contains 1 Fact
+* Contains 1 Question
+* Selected from a repository of facts and questions
+
+    *The idea is for the user to either use ready made flashcards/notes or make these flashcards as they go along studying
+
+    *Public repository containing these facts can be set up and shared between students 
+
+    *The underlying code will pick facts and questions randomly
+
+    *It takes into account when was the last time the user was shown this fact, and older stuff will be given a higher weight   
+
+    *Spaced repetition
+
+
+
+##### **Short Term Goal**
+
+
+
+* Retrieval from database
+* Random note selection
+
+##### **Long Term Goal**
+
+
+
+* Older notes get greater weight for repetition 
+
+#### **3. Kanban**
+
+##### **Background**
+
+
+
+* Written in JS
+* Notes stored in database
+* Eventually will implement Quill editor for more powerful note-taking capability
+* The idea behind the Kanban is it is a super duper flexible and customisable way of implementing a centralised to do list to manage tasks, and in some ways it provides a little bit of gamification to keep motivation up.
+
+##### **Short Term Goals**
+
+
+
+* Text note storage and retrieval from database
+* Better editor 
+
+##### **Long Term Goals**
+
+
+
+* Support for attachments
+
+    >Images
+
+
+    >Audio
+
+
+    >Other misc attachments
+
+* Reminders  
+
+#### **4.Calendar**
+
+##### **Background**
+
+
+
+* Displays automatically scraped deadlines
+* User will also eventually have the option to add their own events
+* Reminders 
+
+ 
+
+#####    **Short Term Goals**
+
+
+
+* Implement event addition 
+
+    **         **
+
+
+##### **Long Term Goals**
+
+
+
+* Automatic scraping
+* Reminders
+
+#### **5.Chatbot**
+
+##### **Background**
+
+
+
+* Powered by a buggy version of BotMan, has php version incompatibility issues pending investigation (potentially to do with differences in php7 and 8; it is a known issue so yeah)
+* Will eventually run a ML algorithm to answer questions**     **
+
+#####   **Short Term Goals**
+
+
+
+* Fix php bug so that pre-programmed responses work
+* iframe's css consistency 
+
+#####   **Long Term Goals**
+
+
+
+* ML answering system
+
+
+
+## **Built With:**
+
+App Link: 
+
+[http://ec2-13-213-63-235.ap-southeast-1.compute.amazonaws.com/](http://ec2-13-213-63-235.ap-southeast-1.compute.amazonaws.com/)
+
+Web Service: Amazon EC2 
+
+Instance type: t2.micro 
+
+Database: Amazon RDS 
+
+Engine: MySQL
+
+
+## **Challenges we ran into:**
+
+1. AWS Database was not accessible from localhost, but worked well on the server. Hence, we spent hours reading AWS documentation and eventually created a new security group to solve this.
+
+2. The iframe in chatbot is not working due to extra "public" word in the url. We tackled the problem by changing the root directory.
+
+3. Template is too complicated and some of the routes are wrongly connected. Hence, we basically create new blade.php files and start from scratch
+
+## **What is next for ASS:**
+
+Short-term goal: 
+
+
+
+* To alert students on deadlines periodically
+* Allow students to access timetable conveniently
+* Simplify campus navigation 
+
+Long-term goal:
+
+
+
+* Integrate academic features that help students improve their study efficacy in a platform
+* Implement worldwide, expand our target users - high school students 
