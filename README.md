@@ -173,7 +173,9 @@ Engine: MySQL
 
 2. The iframe in chatbot is not working due to extra "public" word in the url. We tackled the problem by changing the root directory.
 
-3. Template is too complicated and some of the routes are wrongly connected. Hence, we basically create new blade.php files and start from scratch
+3. Template is not fully up to date, and some of the routes are wrongly connected. Hence, we basically had to reverse engineer everything and write a lot of stuff from scratch. That was difficult since it's the first time we are working with Blade.
+
+4. Getting the javascript for the kanban page proved to be challenging, due to complete lack of prior experience and several differences between scripts from jsdelivr and Cloudflare.
 
 ## **What is next for ASS:**
 
