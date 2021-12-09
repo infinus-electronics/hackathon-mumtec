@@ -37,6 +37,7 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('calendar', function () {return view('pages.calendar');})->name('calendar'); 
 	 Route::get('homework-help', function () {return view('pages.chatbot');})->name('homework-help');
     //  Route::get('anki', function () {return view('pages.anki');})->name('anki');
+	Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 
     
